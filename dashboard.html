@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Bus Tracking Dashboard</h2>
+<button onclick="logout()">Logout</button>
+
+<br><br>
+
+<button onclick="goToBuses()">View Buses</button>
+<br><br>
+<button onclick="goToMap()">Live Bus Location</button>
+
+<script>
+function logout() {
+    window.location.href = "login.html";
+}
+
+function goToBuses() {
+    window.location.href = "buses.html";
+}
+
+function goToMap() {
+    window.location.href = "map.html";
+}
+</script>
+
+</body>
+</html>
