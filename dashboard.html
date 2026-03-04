@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px gray;
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    color: white;
+}
+
+.view-btn {
+    background-color: #28a745;
+}
+
+.map-btn {
+    background-color: #17a2b8;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="dashboard-box">
+
+    <h2>Bus Tracking Dashboard</h2>
+
+    <button class="view-btn" onclick="goToBuses()">View Buses</button>
+    <button class="map-btn" onclick="goToMap()">Live Bus Location</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+function logout() {
+    window.location.href = "index.html";
+}
+
+function goToBuses() {
+    window.location.href = "buses.html";
+}
+
+function goToMap() {
+    window.location.href = "map.html";
+}
+</script>
+
+</body>
+</html>

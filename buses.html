@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus List</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+h2 {
+    color: #007bff;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6f2ff;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Available Buses</h2>
+<button onclick="goBack()">Back</button>
+
+<table>
+    <tr>
+        <th>Bus No</th>
+        <th>Route</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>101</td>
+        <td>Chiplun - Gharada College</td>
+        <td>On Time</td>
+    </tr>
+    <tr>
+        <td>102</td>
+        <td>Sheldi - Khed</td>
+        <td>On Time</td>
+    </tr>
+    <tr>
+        <td>103</td>
+        <td>Khed - Aashti</td>
+        <td>Delayed</td>
+    </tr>
+    <tr>
+        <td>104</td>
+        <td>Choravne - Khed</td>
+        <td>On Time</td>
+    </tr>
+    <tr>
+        <td>105</td>
+        <td>Khed - Aayani</td>
+        <td>On Time</td>
+    </tr>
+    <tr>
+        <td>106</td>
+        <td>Mani - Khed</td>
+        <td>Delayed</td>
+    </tr>
+</table>
+
+</div>
+
+<script>
+function goBack() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
+    

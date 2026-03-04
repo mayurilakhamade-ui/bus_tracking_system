@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Bus Location</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 85%;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+h2 {
+    color: #007bff;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px gray;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Live Bus Location</h2>
+<button onclick="goBack()">Back</button>
+
+<br>
+
+<select onchange="changeRoute()" id="routeSelect">
+    <option value="Chiplun to Gharada College">Chiplun - Gharada College</option>
+    <option value="Sheldi to Khed">Sheldi - Khed</option>
+    <option value="Khed to Aashti">Khed - Aashti</option>
+    <option value="Choravne to Khed">Choravne - Khed</option>
+    <option value="Khed to Aayani">Khed - Aayani</option>
+    <option value="Dabhil Mani to Khed">Mani - Khed</option>
+</select>
+
+<br><br>
+
+<iframe 
+    id="mapFrame"
+    width="100%" 
+    height="500"
+    src="https://maps.google.com/maps?q=Chiplun%20to%20Gharada%20College%20Maharashtra&output=embed">
+</iframe>
+
+</div>
+
+<script>
+function changeRoute() {
+    var route = document.getElementById("routeSelect").value;
+    var map = document.getElementById("mapFrame");
+    map.src = "https://maps.google.com/maps?q=" + route + "%20Maharashtra&output=embed";
+}
+
+function goBack() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
